@@ -1,17 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  
-  <title>Restaurant Apps Starter Project</title>
-</head>
-<body>
-  <h1>Restaurant Apps Starter Project</h1>
-  <p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-  <p>Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros sebagai background hero elemen</p>
-  <img src="./images/heros/hero-image_1.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_2.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_3.jpg" width="450" alt="">
-  <img src="./images/heros/hero-image_4.jpg" width="450" alt="">
-</body>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Restaurant Apps Starter Project</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navbar -->
+      <nav class="nav">
+        <div class="nav__logo">
+          <h1>Find Indonesian Resto</h1>
+        </div>
+        <div class="nav__link">
+          <ul class="nav__list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Restaurant</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- End navbar -->
+      <button class="hamburger">☰</button>
+    </header>
+    <!-- End header -->
+    <!-- main  -->
+    <main>
+      <!-- Jumbotron -->
+      <section id="jumbotron">
+        <div class="jumbotron__overlay">
+          <div class="jumbotron__desc">
+            <h1>Are you on vacation in Indonesia but confused about where to eat?</h1>
+            <p>
+              Many famous restaurants are available with the best dishes, don't have a lot of money? of course the restaurant here even though the
+              rating is high but the price is affordable.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- End Jumbotron -->
+      <!-- RestaurantList -->
+      <section id="restaurant">
+        <h1>Restaurant list</h1>
+        <p>The following is a list of recommended favorite restaurants in Indonesia with high ratings.</p>
+        <!-- Restaurant List -->
+        <article class="restaurant__list">
+          <article class="restaurant__item" data-id="blablabla">
+            <img src="" alt="" />
+            <p class="restaurant__item__title">Lorem, ipsum.</p>
+            <p class="restaurant__item__rating">Rating : ⭐⭐⭐⭐ 4.5</p>
+            <p class="restaurant__item__desc">Lorem ipsum dolor sit amet consectetur.</p>
+            <p href="#" class="restaurant__item__city">at : <a href="">Jogja</a></p>
+          </article>
+          <!-- End Restaurant List -->
+        </article>
+      </section>
+      <!-- End RestaurantList -->
+    </main>
+    <!-- end main -->
+    <!-- footer -->
+    <footer id="footer">
+      <section class="sosmed">
+        <h1>Follow us</h1>
+        <div class="sosmed__list">
+          <span>fb</span>
+          <span>twitter</span>
+          <span>Instaram</span>
+        </div>
+      </section>
+      <!-- copyright -->
+      <p>
+        Copyright &copy; Find Resto
+        <script>
+          document.write(/\d{4}/.exec(Date())[0]);
+        </script>
+      </p>
+      <!-- end copyright -->
+    </footer>
+    <!-- End footer -->
+  </body>
 </html>
