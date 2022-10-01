@@ -1,83 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-
-    <title>Restaurant Apps Starter Project</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <!-- Navbar -->
-      <nav class="nav">
-        <div class="nav__logo">
-          <h1>Find Indonesian Resto</h1>
-        </div>
-        <div class="nav__link">
-          <ul class="nav__list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Restaurant</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-        </div>
-      </nav>
-      <!-- End navbar -->
-      <button class="hamburger">☰</button>
-    </header>
-    <!-- End header -->
-    <!-- main  -->
-    <main>
-      <!-- Jumbotron -->
-      <section id="jumbotron">
-        <div class="jumbotron__overlay">
-          <div class="jumbotron__desc">
-            <h1>Are you on vacation in Indonesia but confused about where to eat?</h1>
-            <p>
-              Many famous restaurants are available with the best dishes, don't have a lot of money? of course the restaurant here even though the
-              rating is high but the price is affordable.
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Find Indonesian Resto</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <!-- Navbar -->
+            <nav class="nav">
+                <h1>Find Indonesian Resto</h1>
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li><a href="#jumbotron">Home</a></li>
+                        <li><a href="#restaurant">Favorite</a></li>
+                        <li><a href="#footer">About Us</a></li>
+                    </ul>
+                </div>
+                <a name="hamburger menu" class="hamburger">☰</a>
+            </nav>
+            <!-- End navbar -->
+            <!-- Skip content -->
+            <a class="skip" tabindex="0" href="#main">Skip to content</a>
+            <!-- end Skip content -->
+        </header>
+        <!-- End header -->
+        <!-- main  -->
+        <main id="main">
+            <!-- Jumbotron -->
+            <section id="jumbotron">
+                <div class="jumbotron__desc">
+                    <h1 tabindex="0">
+                        Are you on vacation in Indonesia but confused about
+                        where to eat?
+                    </h1>
+                    <p tabindex="0">
+                        Many famous restaurants are available with the best
+                        dishes, don't have a lot of money? of course the
+                        restaurant here even though the rating is high but the
+                        price is affordable.
+                    </p>
+                </div>
+                <div class="jumbotron__overlay"></div>
+            </section>
+            <!-- End Jumbotron -->
+            <!-- RestaurantList -->
+            <section id="restaurant">
+                <h1 tabindex="0">Restaurant list</h1>
+                <p tabindex="0">
+                    The following is a list of recommended favorite restaurants
+                    in Indonesia with high ratings.
+                </p>
+                <!-- Restaurant List -->
+                <section class="restaurant__list">
+                    <!-- End Restaurant List -->
+                </section>
+            </section>
+            <!-- End RestaurantList -->
+        </main>
+        <!-- end main -->
+        <!-- footer -->
+        <footer id="footer">
+            <section class="sosmed">
+                <h1 tabindex="0">About us</h1>
+                <p tabindex="0">follow us on social media</p>
+                <div class="sosmed__list">
+                    <a
+                        title="twitter"
+                        href="https://mobile.twitter.com/kevin_alfito"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path
+                                d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"
+                            /></svg
+                    ></a>
+                    <a title="linkedin" href="#"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                            /></svg
+                    ></a>
+                    <a
+                        title="instagram"
+                        href="https://www.instagram.com/kevin.tekno/"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                            <path
+                                d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"
+                            /></svg
+                    ></a>
+                </div>
+            </section>
+            <!-- copyright -->
+            <p class="copyr">
+                Copyright <sup>&copy;</sup> Find Resto
+                <script>
+                    document.write(/\d{4}/.exec(Date())[0]);
+                </script>
             </p>
-          </div>
-        </div>
-      </section>
-      <!-- End Jumbotron -->
-      <!-- RestaurantList -->
-      <section id="restaurant">
-        <h1>Restaurant list</h1>
-        <p>The following is a list of recommended favorite restaurants in Indonesia with high ratings.</p>
-        <!-- Restaurant List -->
-        <article class="restaurant__list">
-          <article class="restaurant__item" data-id="blablabla">
-            <img src="" alt="" />
-            <p class="restaurant__item__title">Lorem, ipsum.</p>
-            <p class="restaurant__item__rating">Rating : ⭐⭐⭐⭐ 4.5</p>
-            <p class="restaurant__item__desc">Lorem ipsum dolor sit amet consectetur.</p>
-            <p href="#" class="restaurant__item__city">at : <a href="">Jogja</a></p>
-          </article>
-          <!-- End Restaurant List -->
-        </article>
-      </section>
-      <!-- End RestaurantList -->
-    </main>
-    <!-- end main -->
-    <!-- footer -->
-    <footer id="footer">
-      <section class="sosmed">
-        <h1>Follow us</h1>
-        <div class="sosmed__list">
-          <span>fb</span>
-          <span>twitter</span>
-          <span>Instaram</span>
-        </div>
-      </section>
-      <!-- copyright -->
-      <p>
-        Copyright &copy; Find Resto
-        <script>
-          document.write(/\d{4}/.exec(Date())[0]);
-        </script>
-      </p>
-      <!-- end copyright -->
-    </footer>
-    <!-- End footer -->
-  </body>
+            <!-- end copyright -->
+        </footer>
+        <!-- End footer -->
+    </body>
 </html>
