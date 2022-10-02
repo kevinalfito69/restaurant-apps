@@ -11,21 +11,23 @@ body {
     overflow-x: hidden;
 }
 /* header */
-header {
-    position: relative;
-}
+
 /* skip */
 .skip {
     padding: 10px 20px;
-    border: 1px solid #f0bb62;
+
     z-index: 40;
     position: absolute;
-    bottom: -10;
+    text-decoration: none;
+    transform: translate(0, 60px);
     right: 0;
     color: #f0bb62;
     display: block;
     background-color: #064635;
     display: block;
+}
+.skip:focus {
+    outline: 2px solid #f0bb62;
 }
 .skip.hide {
     display: none;
@@ -38,6 +40,7 @@ header {
     background-color: #064635;
     align-items: center;
     position: relative;
+    max-height: 61px;
 }
 .nav > h1 {
     color: #f0bb62;
@@ -61,20 +64,25 @@ header {
 
 .nav__list li {
     list-style: none;
-
     margin: 10px;
 }
-.nav__list li a {
+.nav__menu .nav__list > li > a {
     text-decoration: none;
+    align-items: center;
+    display: inline-flex;
     color: #f0bb62;
+    min-height: 44px;
+    min-width: 44px;
 }
 .hamburger {
+    min-width: 44px;
+    min-height: 44px;
     cursor: pointer;
     position: absolute;
     left: 0;
     font-size: 1.2em;
     padding: 10px;
-
+    text-decoration: none;
     color: #f0bb62;
 }
 /* jumbotron */
@@ -229,9 +237,15 @@ footer .sosmed__list {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
 }
-
+footer .sosmed__list a {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 footer .sosmed__list svg {
     display: inline-block;
     width: 15px;
