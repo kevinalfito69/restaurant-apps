@@ -20,7 +20,7 @@ const ratting = (rating) => {
 document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector(".nav__menu");
-    const skip = document.querySelector(".skip");
+
     const main = document.querySelector("main");
 
     // hamburger event
@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     // main event
     main.addEventListener("click", () => {
-        skip.classList.add("hide");
         navMenu.classList.remove("open");
     });
     const restaurantList = document.querySelector(".restaurant__list");
