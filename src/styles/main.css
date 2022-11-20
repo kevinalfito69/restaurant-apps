@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
 * {
     box-sizing: border-box;
 }
 html,
 body {
     scroll-behavior: smooth;
-    font-family: "Nunito", sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -95,7 +95,7 @@ body {
     width: 100%;
     min-height: 300px;
 
-    background-image: url("../public/images/heros/hero-image_4.jpg");
+    background-image: url('../public/images/heros/hero-image_4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
