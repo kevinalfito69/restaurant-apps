@@ -21,6 +21,7 @@ Customer Reviews
 Terdapat tombol favorite untuk memasukkan atau menghapus restoran favorit dari database (gunakan IndexedDB).
 Halaman Daftar Restoran Favorit
 Syarat:
+
 Halaman Daftar Restoran dapat diakses melalui menu navigasi favorit.
 Menampilkan restoran yang difavoritkan oleh pengguna (data diambil dari indexedDB).
 Wajib menampilkan nama, gambar dan minimal salah satu diantara kota, rating, dan atau deskripsi pada restoran.
