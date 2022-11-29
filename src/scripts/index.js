@@ -3,6 +3,7 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import swRegister from './utils/sw-register';
 import App from './views/app';
+// import LikeButtonInititator from './utils/like-button-initiator';
 
 document.addEventListener('DOMContentLoaded', () => {
   // eslint-disable-next-line no-unused-vars
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   window.addEventListener('load', () => {
     swRegister();
+    // LikeButtonInititator();
     app.renderPage();
   });
 });

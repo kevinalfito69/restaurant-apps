@@ -56,14 +56,18 @@ const createDetailResto = (resto) => `
 
                         ${resto.address}
                     </div>
-                    <p class="restaurant__detail__category"> ${resto.categories
-    .map((element) => `${element.name}`)
-    .join('')}</p>
+                   
                 </div>
                 <h2>Description</h2>
                 <p class="restaurant__detail__desc" tabindex="0">
                     ${resto.description}
                 </p>
+                <div class="restaurant__category__container">
+                Categories:
+                <p class="restaurant__detail__category">  ${resto.categories
+    .map((element) => `${element.name}`)
+    .join('')}</p>
+    </div>
                 <section class="restaurant__detail__menu">
                     <h2>
                         Menu
