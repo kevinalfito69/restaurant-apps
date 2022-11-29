@@ -383,6 +383,24 @@ body {
     float: right;
     font-weight: 800;
 }
+.like {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(45deg, hsla(164, 84%, 15%, 1) 24%, hsla(164, 43%, 44%, 1) 100%);
+    border: 1px solid #f0bb62;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 20px;
+    color: #f0bb62;
+    cursor: pointer;
+}
 footer {
     padding: 10px;
     background-color: #064635;

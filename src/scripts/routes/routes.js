@@ -1,9 +1,9 @@
 import Detail from '../views/pages/detail';
-import Favorite from '../views/pages/favorite';
+import Index from '../views/pages/favorite';
 
 const routes = {
-  '/': Favorite,
-  '/favorite': Favorite,
+  '/': Index,
+  '/favorite': Index,
   '/detail/:id': Detail,
 };
 export default routes;

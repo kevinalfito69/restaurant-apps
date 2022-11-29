@@ -1,7 +1,7 @@
 import RestaurantDb from '../../globals/restaurant-db';
-import templateCreator from '../templates/template-creator';
+import { createItemResto } from '../templates/template-creator';
 
-const Favorite = {
+const Index = {
   async render() {
     return `
     <!-- Jumbotron -->
@@ -40,8 +40,8 @@ const Favorite = {
     const resto = await RestaurantDb.favoriteResto();
 
     resto.forEach((restos) => {
-      restaurantList.innerHTML += templateCreator.createItemResto(restos);
+      restaurantList.innerHTML += createItemResto(restos);
     });
   },
 };
-export default Favorite;
+export default Index;
