@@ -1,47 +1,33 @@
-import RestaurantDb from '../../globals/restaurant-db';
+import FavoriteRestaurantIdb from '../../globals/favorite-resto-idb';
 import { createItemResto } from '../templates/template-creator';
 
-const Index = {
+const Favorite = {
   async render() {
     return `
-    <!-- Jumbotron -->
-    <section id="jumbotron">
-        <div class="jumbotron__desc">
-            <h1 tabindex="0">
-                Are you on vacation in Indonesia but confused about where to eat?
-            </h1>
-            <p tabindex="0">
-                Many famous restaurants are available with the best dishes, don't have a lot
-                of money? of course the restaurant here even though the rating is high but
-                the price is affordable.
-            </p>
-        </div>
-        <div class="jumbotron__overlay"></div>
+    <section id="restaurant" id="#main" tabindex="0" >
+    <h1 tabindex="0">Favorite restaurant list</h1>
+    <p tabindex="0">
+        Below is a list of your favorite restaurants, click on a restaurant name to add or remove.
+    </p>
+    <!-- Restaurant List -->
+    <section class="restaurant__list">
+        <!-- End Restaurant List -->
     </section>
-    <!-- End Jumbotron -->
-    <!-- RestaurantList -->
-    <section id="restaurant">
-        <h1 tabindex="0">Restaurant list</h1>
-        <p tabindex="0">
-            The following is a list of recommended favorite restaurants in Indonesia with
-            high ratings.
-        </p>
-        <!-- Restaurant List -->
-        <section class="restaurant__list">
-            <!-- End Restaurant List -->
-        </section>
-    </section>
-    <!-- End RestaurantList -->
-  
-          `;
+</section>
+    `;
   },
   async afterRender() {
-    const restaurantList = document.querySelector('.restaurant__list');
-    const resto = await RestaurantDb.favoriteResto();
+    const resto = await FavoriteRestaurantIdb.getAllResto();
+    const restoContainer = document.querySelector('.restaurant__list');
 
+    if (resto.length === 0) {
+      restoContainer.innerHTML
+                += "<p style='color:red;' >You haven't entered your favorite restaurant yet, enter the restaurant details and add it now!!</p>";
+    }
     resto.forEach((restos) => {
-      restaurantList.innerHTML += createItemResto(restos);
+      restoContainer.innerHTML += createItemResto(restos);
     });
   },
 };
-export default Index;
+
+export default Favorite;

@@ -5,7 +5,7 @@ const ratting = (rating) => {
   return star.repeat(rating);
 };
 const createItemResto = (resto) => `
-<article class="restaurant__item" data-id="blablabla">
+<article class="restaurant__item"  tabindex="0" >
 <div class="restaurant__item__img">
     <img tabindex="0"
         alt="gambar ${resto.name}"
@@ -33,8 +33,8 @@ const createDetailResto = (resto) => `
                 src="${CONFIG.MEDIUM_IMG_URL}${resto.pictureId}"
                 alt="${resto.name}"
             />
-            <section class="restaurant__detail__section" tabindex="0">
-                <a href="/"
+            <section class="restaurant__detail__section" tabindex="0" id="#main">
+                <a class='back' href="/"
                     ><svg
                         stroke="currentColor"
                         fill="currentColor"

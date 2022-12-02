@@ -1,6 +1,7 @@
 {
     "name": "Find resto",
     "short_name": "Find resto",
+    "description": "Many famous restaurants are available with the best dishes in here!",
     "theme_color": "#064635",
     "background_color": "#ffffff",
     "display": "standalone",

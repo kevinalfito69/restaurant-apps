@@ -6,7 +6,8 @@ import LikeButtonInititator from '../../utils/like-button-initiator';
 const Detail = {
   async render() {
     return `
-    <article class="restaurant__detail">
+    <article class="restaurant__detail" tabindex="0" id="#main">
+    <!-- Skip content -->
     </article>
     <div id="LikeContainer"></div>
 
@@ -18,7 +19,6 @@ const Detail = {
     const resto = await RestaurantDb.detailResto(url.id);
     const main = document.querySelector('.restaurant__detail');
     main.innerHTML = createDetailResto(resto);
-
     LikeButtonInititator.init({
       LikeContainer: document.querySelector('#LikeContainer'),
       resto: {

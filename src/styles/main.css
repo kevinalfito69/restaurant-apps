@@ -71,6 +71,7 @@ body {
     list-style: none;
     margin: 10px;
 }
+
 .nav__menu .nav__list > li > a {
     text-decoration: none;
     align-items: center;
@@ -79,6 +80,7 @@ body {
     min-height: 44px;
     min-width: 44px;
 }
+
 .hamburger {
     min-width: 44px;
     min-height: 44px;
@@ -88,7 +90,14 @@ body {
     font-size: 1.2em;
     padding: 10px;
     text-decoration: none;
+    background: none;
+
+    border: none;
     color: #f0bb62;
+}
+.hamburger:hover {
+    background-color: #0b3d30b4;
+    border-radius: 10px;
 }
 /* jumbotron */
 #jumbotron {
@@ -157,6 +166,13 @@ body {
     gap: 10px;
     overflow: hidden;
     box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.restaurant__item a {
+    text-decoration: none;
+    min-height: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
 }
 
 .restaurant__item__img {
@@ -251,7 +267,8 @@ body {
 .restaurant__detail__section a {
     text-decoration: none;
     color: rgba(55, 55, 55, 0.933);
-
+    min-width: 44px;
+    min-height: 44px;
     border-radius: 5px;
     max-width: 24px;
     top: 0;
