@@ -6,8 +6,7 @@ import LikeButtonInititator from '../../utils/like-button-initiator';
 const Detail = {
   async render() {
     return `
-    <article class="restaurant__detail" tabindex="0" id="#main">
-    <!-- Skip content -->
+    <article class="restaurant__detail" tabindex="0" >
     </article>
     <div id="LikeContainer"></div>
 

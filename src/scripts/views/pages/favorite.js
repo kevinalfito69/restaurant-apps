@@ -4,7 +4,7 @@ import { createItemResto } from '../templates/template-creator';
 const Favorite = {
   async render() {
     return `
-    <section id="restaurant" id="#main" tabindex="0" >
+    <section id="restaurant"  tabindex="0" >
     <h1 tabindex="0">Favorite restaurant list</h1>
     <p tabindex="0">
         Below is a list of your favorite restaurants, click on a restaurant name to add or remove.
