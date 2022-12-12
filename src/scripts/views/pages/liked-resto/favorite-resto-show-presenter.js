@@ -8,6 +8,7 @@ class FavoriteRestoShowPresenter {
   async _showFavoriteResto() {
     const restos = await this._favoriteResto.getAllResto();
     this._displayResto(restos);
+    console.log(restos);
   }
 
   _displayResto(restos) {

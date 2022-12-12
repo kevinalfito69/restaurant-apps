@@ -1,8 +1,8 @@
 class FavoriteRestoSearchPresenter {
   constructor({ favoriteResto, view }) {
     this._view = view;
-    this._listenToSearchRequestByUser();
     this._favoriteResto = favoriteResto;
+    this._listenToSearchRequestByUser();
   }
 
   _listenToSearchRequestByUser() {
@@ -24,7 +24,7 @@ class FavoriteRestoSearchPresenter {
   }
 
   _showFoundResto(restos) {
-    this._view.showResto(restos);
+    this._view.showFavoriteResto(restos);
   }
 
   get latestQuery() {

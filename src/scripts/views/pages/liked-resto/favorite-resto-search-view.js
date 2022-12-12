@@ -3,50 +3,26 @@ import { createItemResto } from '../../templates/template-creator';
 class FavoriteRestoSearchView {
   getTemplate() {
     return `
-        <div id="resto-search-container">
-          <input id="query" type="text">
-          <div class="resto-result-container">
-            <ul class="restos">
-            </ul>
-          </div>
-        </div>
-      `;
-  }
-
-  getFavoriteRestoTemplate() {
-    return `
-      <div class="content">
-        <h2 class="content__heading">Your Liked Resto</h2>
-        <div id="restos" class="restos">
-        </div>
-      </div>
+    <section id="restaurant"  tabindex="0" >
+    <h1 tabindex="0">Favorite restaurant list</h1>
+    <p tabindex="0">
+    Below is a list of your favorite restaurants, click on a restaurant name to add or remove.
+    </p>
+    <input id="query" type="text" class="search-query" placeholder="Put your favorite restaurant here...">
+          <!-- Restaurant List -->
+        <section class="restaurant__list"id="restaurant__list">
+    <!-- End Restaurant List -->
+      </section>
+    </section>
     `;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   runWhenUserIsSearching(callback) {
     document.getElementById('query').addEventListener('change', (event) => {
       callback(event.target.value);
+      console.log(event.target.value);
     });
-  }
-
-  showResto(restos) {
-    let html;
-    if (restos.length > 0) {
-      html = restos.reduce(
-        (carry, resto) => carry.concat(
-          `<li class="resto"><span class="resto__title">${
-            resto.title || '-'
-          }</span></li>`,
-        ),
-        '',
-      );
-    } else {
-      html = '<div class="resto__not__found">Film tidak ditemukan</div>';
-    }
-    document.querySelector('.restos').innerHTML = html;
-    document
-      .getElementById('resto-search-container')
-      .dispatchEvent(new Event('restos:searched:updated'));
   }
 
   showFavoriteResto(restos = []) {
@@ -54,10 +30,16 @@ class FavoriteRestoSearchView {
     if (restos.length) {
       html = restos.reduce((carry, resto) => carry.concat(createItemResto(resto)), '');
     } else {
-      html = '<div class="resto-item__not__found"></div>';
+      html = this._getEmptyRestaurantTemplate();
     }
-    document.getElementById('restos').innerHTML = html;
-    document.getElementById('restos').dispatchEvent(new Event('restos:updated'));
+    document.getElementById('restaurant__list').innerHTML = html;
+    document.getElementById('restaurant__list').dispatchEvent(new Event('restos:updated'));
+  }
+
+  _getEmptyRestaurantTemplate() {
+    return `
+    <p style="color:red"  class="restaurant-item__not__found">Tidak ada restaurant untuk ditampilkan</p>
+    `;
   }
 }
 export default FavoriteRestoSearchView;
