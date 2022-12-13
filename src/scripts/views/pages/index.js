@@ -6,6 +6,10 @@ const Index = {
     return `
     <!-- Jumbotron -->
     <section id="jumbotron">
+    <picture class="jumbotron__bg" >
+    <source media="(max-width: 600px)" srcset="./images/hero-image_4-small.jpg">
+    <img   src="./images/hero-image_4-large.jpg" alt="resto poster">
+  </picture>
         <div class="jumbotron__desc">
             <h1 tabindex="0">
                 Are you on vacation in Indonesia but confused about where to eat?
@@ -15,8 +19,9 @@ const Index = {
                 of money? of course the restaurant here even though the rating is high but
                 the price is affordable.
             </p>
+            <div class="jumbotron__overlay">
         </div>
-        <div class="jumbotron__overlay"></div>
+        </div>
     </section>
     <!-- End Jumbotron -->
     <!-- RestaurantList -->
