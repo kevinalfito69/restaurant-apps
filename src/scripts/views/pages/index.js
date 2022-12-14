@@ -8,8 +8,9 @@ const Index = {
     <section id="jumbotron">
     <picture class="jumbotron__bg" >
     <source media="(max-width: 600px)" srcset="./images/hero-image_4-small.jpg">
+    <source type="image/webp" srcset="./images/hero-image_4.webp">
     <img   src="./images/hero-image_4-large.jpg" alt="resto poster">
-  </picture>
+    </picture>
         <div class="jumbotron__desc">
             <h1 tabindex="0">
                 Are you on vacation in Indonesia but confused about where to eat?

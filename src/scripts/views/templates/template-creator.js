@@ -1,4 +1,6 @@
 import CONFIG from '../../globals/config';
+import 'lazysizes';
+import 'lazysizes/plugins/object-fit/ls.object-fit';
 
 const ratting = (rating) => {
   const star = '⭐';
@@ -9,9 +11,10 @@ const createItemResto = (resto) => `
 
 <div class="restaurant__item__img">
 <picture>
-<source media="(max-width: 600px)" srcset="${CONFIG.SMALL_IMG_URL}${resto.pictureId}">
-<img tabindex="0"  src="${CONFIG.MEDIUM_IMG_URL}${resto.pictureId}" 
-alt="gambar ${resto.name}">
+    <source media="(max-width: 600px)" srcset="${CONFIG.SMALL_IMG_URL}${resto.pictureId}" />
+    <img class='lazyload' tabindex="0"  src="${CONFIG.MEDIUM_IMG_URL}${
+  resto.pictureId
+}" alt="gambar ${resto.name}" />
 </picture>
     
 </div>
@@ -39,8 +42,7 @@ alt="${resto.name}"/>
 </picture>
           
             <section class="restaurant__detail__section" tabindex="0" id="main">
-                <a class='back' href="/"
-                    ><svg
+                <a class='back' href="/" aria-label="Back to homepage" ><svg
                         stroke="currentColor"
                         fill="currentColor"
                         stroke-width="0"
@@ -57,9 +59,7 @@ alt="${resto.name}"/>
                 <div class="restaurant__detail__info" tabindex="0">
                     <div class="ratting">⭐ ${resto.rating}</div>
                     <div class="address" tabindex="0" >
-                        <span> ${resto.city}</span>
-
-                        ${resto.address}
+                        <span> ${resto.city} ${resto.address}</span>
                     </div>
                    
                 </div>
