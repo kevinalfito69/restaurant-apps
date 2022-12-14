@@ -8,7 +8,9 @@ class FavoriteRestoSearchView {
     <p tabindex="0">
     Below is a list of your favorite restaurants, click on a restaurant name to add or remove.
     </p>
-    <input id="query" type="text" class="search-query" placeholder="Put your favorite restaurant here...">
+    <div class='search__container'>
+      <input id="query" type="text" class="search__input" placeholder="Put your favorite restaurant here...">
+    </div>
           <!-- Restaurant List -->
         <section class="restaurant__list"id="restaurant__list">
     <!-- End Restaurant List -->

@@ -427,7 +427,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: linear-gradient(45deg, hsla(164, 84%, 15%, 1) 24%, hsla(164, 43%, 44%, 1) 100%);
     border: 1px solid #f0bb62;
     position: fixed;
@@ -438,6 +437,24 @@ body {
     font-size: 20px;
     color: #f0bb62;
     cursor: pointer;
+}
+.search__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.search__input{
+    padding: 10px;
+    border: 1px solid #064635;
+    border-radius: 10px;
+    background-color: inherit;
+    color: #064635;
+    caret-color: #064635;
+    width: 80%;
+}
+.search__input:focus{
+    outline: 1px solid #064635;
 }
 footer {
     padding: 10px;
