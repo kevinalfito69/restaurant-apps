@@ -7,7 +7,7 @@
     "start": "http-server dist",
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build-webpack": "webpack --config webpack.prod.js",
-    "build": "npm run build-webpack && npm run build-image",
+    "build": "npm run build-webpack",
     "test": "karma start",
     "e2e": "codeceptjs run --steps",
     "build-image": "node sharp.js"

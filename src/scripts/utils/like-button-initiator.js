@@ -1,4 +1,3 @@
-import FavoriteRestaurantIdb from '../globals/favorite-resto-idb';
 import {
   createLikeButtonTemplate,
   createLikedButtonTemplate,

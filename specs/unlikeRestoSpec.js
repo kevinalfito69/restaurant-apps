@@ -29,14 +29,4 @@ describe('Unliking A Resto', () => {
       .dispatchEvent(new Event('click'));
     expect(await FavoriteRestaurantIdb.getAllResto()).toEqual([]);
   });
-  it('should not throw error if the unliked resto is not in the list', async () => {
-    await TestFactories.createLikeButtonPresenterWithResto({ id: 1 });
-    // hapus dulu film dari daftar film yang disukai
-    await FavoriteRestaurantIdb.deleteResto(1);
-    // kemudian, simulasikan pengguna menekan widget batal menyukai film
-    document
-      .querySelector('[aria-label="unlike this resto"]')
-      .dispatchEvent(new Event('click'));
-    expect(await FavoriteRestaurantIdb.getAllResto()).toEqual([]);
-  });
 });

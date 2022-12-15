@@ -10,12 +10,12 @@ const createItemResto = (resto) => `
 <article class="restaurant__item"  tabindex="0" >
 
 <div class="restaurant__item__img">
-<picture>
-    <source media="(max-width: 600px)" srcset="${CONFIG.SMALL_IMG_URL}${resto.pictureId}" />
-    <img class='lazyload' tabindex="0"  src="${CONFIG.MEDIUM_IMG_URL}${
+
+    
+    <img class='lazyload' tabindex="0"  data-src="${CONFIG.SMALL_IMG_URL}${
   resto.pictureId
 }" alt="gambar ${resto.name}" />
-</picture>
+
     
 </div>
 <div class="restaurant__item__detail" data-id=${resto.id}>
