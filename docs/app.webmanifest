@@ -1,6 +1,7 @@
 {
     "name": "Find resto",
     "short_name": "Find resto",
+    "description": "Many famous restaurants are available with the best dishes in here!",
     "theme_color": "#064635",
     "background_color": "#ffffff",
     "display": "standalone",
@@ -11,6 +12,7 @@
             "src": "./icons/android-icon-36x36.png",
             "sizes": "36x36",
             "type": "image/png",
+            
             "density": "0.75"
         },
         {
@@ -41,6 +43,26 @@
             "src": "./icons/android-icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
+            "density": "4.0"
+        },
+        {
+            "src": "./icons/android-icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "density": "5.0"
+        },
+        {
+            "src": "./icons/maskable.png",
+            "sizes": "1080x1080",
+            "type": "image/png",
+            "purpose": " maskable",
+            "density": "4.0"
+        },
+        {
+            "src": "./icons/favicon.png",
+            "sizes": "1080x1080",
+            "type": "image/png",
+            "purpose": "any",
             "density": "4.0"
         }
     ]
