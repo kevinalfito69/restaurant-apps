@@ -26,7 +26,7 @@ module.exports = merge(common, {
     new CleanWebpackPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      openAnalyzer: false,
+      openAnalyzer: true,
     }),
   ],
 });
