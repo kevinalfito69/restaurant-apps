@@ -1,6 +1,6 @@
 # restaurant-apps
 
-Find favorite restaurant.
+Find favorite restaurant 🍜.
 
 ## How to start?
 
